@@ -11,14 +11,15 @@
 
 <nav>
     <h1>VELINK SHORTENER</h1>
+    <img id = "short-velink" src="https://avatars.githubusercontent.com/u/70204648?v=4">
 </nav>
 
 <div id = 'links'>
-    <h2>Here are your links!</h2>
+    <h2>Here are your velinks!</h2>
 <div id ='align'>
-Old Link: {{ original_url }} <br/>
+Old Velink: {{ original_url }} <br/>
 <div id='new-link'>
-New Link: <a id = "myInput" href="{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}">{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}</a>
+New Velink: <a id = "myInput" href="{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}">{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}</a>
 <button id="copy" onclick="myFunction()">Copy link</button>
 </div>
 </div>
