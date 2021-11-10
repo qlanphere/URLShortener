@@ -1,0 +1,19 @@
+<head>
+    <title>Flask app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+</head>
+<nav>
+    <h1>VELINK SHORTENER</h1>
+    <img src="https://avatars.githubusercontent.com/u/70204648?v=4">
+</nav>
+<div id="home">
+<h2 id="enter"> Enter a URL you would like to shorten!</h2>
+<form method = 'POST' action = "{{ url_for('short.add_link') }}">
+    <input type = "text" name = "original_url" id="url_input">
+    <input type="submit" id="url_submit">
+</form>
+</div>
