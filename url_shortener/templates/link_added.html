@@ -1,0 +1,4 @@
+Old Link: {{ original_url }} <br/>
+New Link: <a id = "myInput" href="{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}">{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}</a>
+<button onclick="myFunction()">Copy link</button>
+<script src="{{ url_for('static', filename='/copy.js') }}"></script>
