@@ -1,4 +1,26 @@
+
+
+<head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+</head>
+
+<nav>
+    <h1>VELINK SHORTENER</h1>
+</nav>
+
+<div id = 'links'>
+    <h2>Here are your links!</h2>
+<div id ='align'>
 Old Link: {{ original_url }} <br/>
+<div id='new-link'>
 New Link: <a id = "myInput" href="{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}">{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}</a>
-<button onclick="myFunction()">Copy link</button>
+<button id="copy" onclick="myFunction()">Copy link</button>
+</div>
+</div>
+</div>
 <script src="{{ url_for('static', filename='/copy.js') }}"></script>
